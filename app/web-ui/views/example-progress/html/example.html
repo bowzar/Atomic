@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+    <div class="pager-container">
+        <h1 class="pager-header">Progress</h1>
+
+        <h3>Progress bars</h3>
+        <form class="code-example">
+            <div class="well blank">
+                <p>
+                    <div class="progress">
+                        <div class="progress-bar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                        </div>
+                    </div>
+                </p>
+                <p>
+                    <div class="progress">
+                        <div class="progress-bar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%">
+                        </div>
+                        <span>10%</span>
+                    </div>
+                </p>
+                <p>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                        </div>
+                        <span>40%</span>
+                    </div>
+                </p>
+                <p>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped active" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
+                        </div>
+                        <span>70%</span>
+                    </div>
+                </p>
+            </div>
+        </form>
+
+        <h3>Loadings</h3>
+        <form id="loading" class="code-example">
+            <div class="well blank">
+                <div class="row">
+                    <div class="col-md-3" style="height:100px;transform:scale(1.5, 1.5)">
+                        <loading></loading>
+                    </div>
+                    <div class="col-md-3" style="height:100px">
+                        <loading></loading>
+                    </div>
+                    <div class="col-md-3" style="height:100px;transform:scale(0.8, 0.8)">
+                        <loading></loading>
+                    </div>
+
+                    <div class="col-md-3" style="height:100px;transform:scale(0.5, 0.5)">
+                        <loading></loading>
+                    </div>
+
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="views/global/css/codemirror.css">
+    <link rel="stylesheet" href="views/example/css/index.css">
+</head>
+
+<body>
+    <div class="frame h-flex">
+        <div id="body-main-navigator" class="sidebar left-sidebar">
+            <div id="body-main-navigator-search-container" class="top-bar">
+                <form>
+                    <input v-model="searchKey" type="text" placeholder="Search" class="form-control">
+                </form>
+            </div>
+            <div id="navigator-container" v-show="!isBusy">
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-header" v-for="g in groups">
+                        <div>{{g.key}}
+                            <span class="badge header-counter" data-toggle="tooltip" v-bind:title="'数量为 ' + g.value.length">{{countFilter(g.value)}}</span>
+                        </div>
+
+                        <ul class="list-group">
+                            <a class="list-group-item list-group-content-item" v-for="x in searchFilter(g.value)" v-bind:class="{active:selectedItem===x.name}"
+                                v-bind:href="x.location">{{x.name}}
+                                <span class="badge hot" v-if="x.props.isHot">HOT !</span>
+                            </a>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <loading v-if="isBusy"></loading>
+        </div>
+        <div id="body-main-content" class="flex-fill">
+            <div id="body-main-content-container" v-show="!isBusy">
+            </div>
+            <loading v-if="isBusy"></loading>
+        </div>
+    </div>
+    
+    <template id="template-example-page">
+        <div>
+            <ul class="nav nav-tabs ctabs ctabs-top ctabs-darker">
+                <li class="active">
+                    <a href="#preview" data-toggle="tab">Preview</a>
+                </li>
+                <li>
+                    <a href="#html" data-toggle="tab">HTML</a>
+                </li>
+                <li>
+                    <a href="#js" data-toggle="tab">Javascript</a>
+                </li>
+                <li>
+                    <a href="#css" data-toggle="tab">CSS</a>
+                </li>
+            </ul>
+            <div class="tab-content tab-content-top">
+                <div id="preview" class="v-stretch tab-pane ctab-panel in active" v-html="page.html">
+                </div>
+                <div id="html" class="code-font tab-pane ctab-panel">
+                    <textarea id="code-html">{{page.html}}</textarea>
+                </div>
+                <div id="js" class="code-font tab-pane ctab-panel">
+                    <textarea id="code-js">{{page.js}}</textarea>
+                </div>
+                <div id="css" class="code-font tab-pane ctab-panel">
+                    <textarea id="code-css">{{page.css}}</textarea>
+                </div>
+            </div>
+        </div>
+    </template>
+</body>
+
+</html>

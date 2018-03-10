@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link rel="stylesheet" href="views/example-dialogs/css/example.css">
+</head>
+
+<body>
+    <div class="panel panel-default panel-skyline frame-container">
+        <div class="panel-heading">
+
+            <h3 class="panel-title flex-fill">Order Details</h3>
+            <span id="errorCount" class="badge error">0</span>
+        </div>
+        <div class="panel-body">
+            <div id="order-details" class="h-flex">
+                <div class="">
+                    <div id="photo-frame" class="">
+                        <img v-bind:src="'data:image/jpeg;base64,' + order.Photo" />
+                    </div>
+                </div>
+                <div id="details-container" class="flex-fill">
+                    <form id="order-details-form" class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Employee Name :</label>
+                            <div class="col-md-8">
+                                <input name="employeeName" type="text" class="form-control" spellcheck="false" v-model="order.EmployeeName" readonly>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" required>Freight :</label>
+                            <div class="col-md-8">
+                                <div class="input-group">
+                                    <span class="input-group-addon">￥</span>
+                                    <input name="freight" type="number" class="form-control" v-model="order.Freight">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" required>Date :</label>
+                            <div class="col-md-8">
+                                <datetimepicker name="date" v-model="order.OrderDate" v-bind:format="format"></datetimepicker>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" required>Country :</label>
+                            <div class="col-md-8">
+                                <selectpicker name="country" v-model="order.ShipCountry">
+                                    <option v-for="c in countries" v-bind:data-content="c.item" v-bind:value="c.ShipCountry">
+                                        {{c.ShipCountry}}
+                                    </option>
+                                </selectpicker>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" required>City :</label>
+                            <div class="col-md-8">
+                                <input name="city" type="text" class="form-control" spellcheck="false" v-model="order.ShipCity">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Address :</label>
+                            <div class="col-md-8">
+                                <input name="address" type="text" class="form-control" spellcheck="false" v-model="order.ShipAddress">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

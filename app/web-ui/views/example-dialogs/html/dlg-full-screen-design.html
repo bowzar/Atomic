@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link rel="stylesheet" href="views/example-dialogs/css/example.css">
+</head>
+
+<body>
+    <div class="modal-content">
+        <div class="modal-header">
+            <div class="bootstrap-dialog-header">
+                <div class="bootstrap-dialog-title">
+                    <div>
+                        <span class="modal-header-icon fa fa-user-circle-o"></span>
+                        <span class="modal-header-title">This is a full custom dialog</span>
+                    </div>
+                </div>
+                <input class="form-control pull-right" type="text" class="form-control" placeholder="Please input text">
+                <div class="bootstrap-dialog-close-button">
+                    <button class="close" data-dismiss="modal">×</button>
+                </div>
+            </div>
+        </div>
+        <div class="modal-body">
+            <div class="bootstrap-dialog-body">
+                <div class="frame">
+                    <ul class="nav nav-tabs nav-stacked ctabs ctabs-left ctabs-darker">
+                        <li class="active">
+                            <a href="#tab31" data-toggle="tab">Tab 1</a>
+                        </li>
+                        <li>
+                            <a href="#tab32" data-toggle="tab">Tab 2</a>
+                        </li>
+                        <li>
+                            <a href="#tab33" data-toggle="tab">Tab 3</a>
+                        </li>
+                        <li>
+                            <a href="#tab34" data-toggle="tab">Tab 4</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content tab-content-left">
+                        <div id="tab31" class="tab-pane ctab-panel in active">
+                            <div class="pager-container">
+                                <div class="checkbox">
+                                    <div class="tick-checkbox">
+                                        <input type="checkbox" id="cb1">
+                                        <label></label>
+                                    </div>
+                                    <label for="cb1">Option one is this and that be sure to include why it's great</label>
+                                </div>
+                                <div class="checkbox">
+                                    <div class="tick-checkbox">
+                                        <input type="checkbox" id="cb2" disabled>
+                                        <label></label>
+                                    </div>
+                                    <label for="cb2">Option two is disabled</label>
+                                </div>
+                                <div class="checkbox">
+                                    <div class="tick-checkbox">
+                                        <input type="checkbox" id="cb3" checked>
+                                        <label></label>
+                                    </div>
+                                    <label for="cb3">Option one is this and that be sure to include why it's great</label>
+                                </div>
+                                <div class="checkbox">
+                                    <div class="tick-checkbox">
+                                        <input type="checkbox" id="cb4" checked disabled>
+                                        <label></label>
+                                    </div>
+                                    <label for="cb4">Option two is disabled</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab32" class="code-font tab-pane ctab-panel">
+                            <div class="pager-container">
+                                <div class="radio">
+                                    <div class="circle-radio">
+                                        <input type="radio" id="rd1" name="rd" checked>
+                                        <label></label>
+                                    </div>
+                                    <label for="rd1">Option one is this and that be sure to include why it's great</label>
+                                </div>
+                                <div class="radio">
+                                    <div class="circle-radio">
+                                        <input type="radio" id="rd2" name="rd">
+                                        <label></label>
+                                    </div>
+                                    <label for="rd2">Option two can be something else and selecting it will deselect option one</label>
+                                </div>
+                                <div class="radio">
+                                    <div class="circle-radio">
+                                        <input type="radio" id="rd3" name="rd" disabled>
+                                        <label></label>
+                                    </div>
+                                    <label for="rd3">Option three is disabled</label>
+                                </div>
+                                <div class="radio">
+                                    <div class="circle-radio">
+                                        <input type="radio" id="rd4" disabled checked>
+                                        <label></label>
+                                    </div>
+                                    <label for="rd4">Option three is disabled</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab33" class="code-font tab-pane ctab-panel">
+                            <div class="pager-container">
+                                <div class="checkbox">
+                                    <div class="slide-checkbox">
+                                        <input id="scb1" type="checkbox" checked>
+                                        <label></label>
+                                    </div>
+                                    <label for="scb1">Option one is this and that be sure to include why it's great</label>
+                                </div>
+                                <div class="checkbox">
+                                    <div class="slide-checkbox">
+                                        <input id="scb2" type="checkbox">
+                                        <label></label>
+                                    </div>
+                                    <label for="scb2">Option two can be something else and selecting it will deselect option one</label>
+                                </div>
+                                <div class="checkbox">
+                                    <div class="slide-checkbox">
+                                        <input id="scb2" type="checkbox" disabled>
+                                        <label></label>
+                                    </div>
+                                    <label for="scb2">Option three is disabled</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab34" class="code-font tab-pane ctab-panel">
+                            <div class="pager-container">
+                                <button id="btnDefault" class="btn btn-default" type="button">Default</button>
+                                <button id="btnPrimary" class="btn btn-primary" type="button">Primary</button>
+                                <button id="btnSuccess" class="btn btn-success" type="button">Success</button>
+                                <button id="btnInfo" class="btn btn-info" type="button">Info</button>
+                                <button id="btnWarning" class="btn btn-warning" type="button">Warning</button>
+                                <button id="btnDanger" class="btn btn-danger" type="button">Danger</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <div class="bootstrap-dialog-footer">
+                <button id="confirm" type="button" class="btn btn-primary">Confirm</button>
+                <button id="close" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button id="refresh" type="button" class="btn btn-default pull-left">Refresh</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        div {
+            display: block;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        #main {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+        }
+
+        #top {
+            height: 50%;
+        }
+
+
+        .tabs {
+            background: whitesmoke;
+            border-bottom: 1px solid lightgrey;
+            margin: 0px;
+            padding: 0px;
+            display: block;
+            list-style: none;
+        }
+
+        /* .tabs::before,
+        .tabs::after {
+            display: table;
+            content: " ";
+        } */
+
+        .tabs::after {
+            clear: both;
+            content: "";
+            display: table;
+        }
+
+        .tabs li {
+            float: left;
+            display: block;
+            position: relative;
+        }
+
+        .tabs a {
+            padding: 20px;
+            display: block;
+            position: relative;
+            text-decoration: none;
+        }
+
+        .tabs a:hover {
+            background: lightblue;
+        }
+
+        .tabs li.active a {
+            background: skyblue;
+        }
+
+        .tab-content {
+            overflow-x: hidden;
+        }
+
+        .tab-content .tab-panel {
+            float: left;
+            display: block;
+            position: relative;
+            word-break: break-all;
+        }
+
+        .tab-content .in {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="main">
+        <div id="top">
+            <ul class="tabs">
+                <li class="active">
+                    <a href="#tab1">Tab 1</a>
+                </li>
+                <li>
+                    <a href="#tab2">Tab 1</a>
+                </li>
+                <li>
+                    <a href="#tab3">Tab 1</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div id="tab1" class="tab-panel">111111111111111111111111111 11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</div>
+                <div id="tab2" class="tab-panel">2222222222222222222222222222 2222222222222222222222222222222222222222222222222222222222222222222</div>
+                <div id="tab3" class="tab-panel">33333333333333333333333333 33333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333</div>
+            </div>
+        </div>
+        <div id="bottom">
+            <div id="bottom-container"></div>
+        </div>
+    </div>
+
+    <script src="jquery"></script>
+    <script>
+
+        var initTabs = function (dom) {
+            var tabs = dom.find(".tabs");
+            var content = dom.find(".tab-content");
+
+            var tabID = tabs.find("li.active:first-child > a").attr("href");
+            var panel = content.find(tabID);
+            panel.addClass("in");
+
+            var index = content.children("div").index(panel);
+
+            tabs.find("li").click(function (event) {
+                event.preventDefault();
+                $(this).siblings().removeClass("active");
+                var panel = content.find(".tab-panel");
+                panel.removeClass("in");
+
+
+                var tabID = $(this).find("a").attr("href");
+                panel = content.find(tabID);
+
+                var left = 0;
+                var currentIndex = content.children("div").index(panel);
+                panel.addClass("in");
+                if (currentIndex > index)
+                    left = panel.width() - 50;
+                else
+                    left = -panel.width() + 50;
+
+                $(this).addClass("active");
+                panel.offset({ left: left });
+                panel.animate({ left: "0px" }, 300, function () { });
+
+                index = currentIndex;
+            });
+        }
+
+        initTabs($("#top"));
+    </script>
+
+    <script>
+        setTimeout(function () {
+            $.get("tabs").then(function (html) {
+                var dom = $("#bottom-container").html(html);
+
+                initTabs(dom);
+
+            });
+        }, 1000);
+    </script>
+
+</body>
+
+</html>

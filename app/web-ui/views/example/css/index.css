@@ -1,0 +1,44 @@
+
+#body-main-navigator {
+    /* float: left; */
+    width: 265px;
+    height: 100%;
+    /*overflow: auto;*/
+}
+
+    #body-main-navigator #navigator-container {
+        height: calc(100% - 69px);
+        overflow-y: auto;
+    }
+
+    #body-main-navigator-search-container{
+        padding: 15px;
+    }
+
+    #body-main-navigator-search-container input{
+        height: 38px;
+    }
+
+#body-main-content {
+    /* float: left; */
+    /* width: calc(100% - 265px); */
+    height: 100%;
+}
+
+#body-main-content-container{
+    height: 100%;
+}
+
+#example-page{
+    height: 100%;
+}
+
+
+.CodeMirror-linenumber{
+    padding: 0px 10px 0px 0px;
+    /* text-align: left; */
+}
+
+.well{
+    max-width: 600px;
+}

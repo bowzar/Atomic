@@ -1,0 +1,47 @@
+/* #table thead, 
+#table tbody { 
+    display: block; 
+} */
+
+
+/* #table {
+    display: flex;
+    flex-direction: column;
+}
+
+#table tbody {
+    height: 200px;
+    overflow-y: auto;   
+    overflow-x: hidden;  
+} */
+
+.photo-small {
+    max-width: 32px;
+    margin-right: 5px;
+}
+
+.datatable td {
+    padding: 8px!important;
+}
+
+.datatable th>a {
+    padding: 10px 8px!important;
+}
+
+.datatable span {
+    vertical-align: middle;
+}
+
+#loading-orders {
+    position: absolute;
+    left: 0px;
+    top: 48px;
+    right: 0px;
+    bottom: 45px;
+    width: auto;
+    height: auto;
+}
+
+#container-adress {
+    margin-bottom: 0px;
+}

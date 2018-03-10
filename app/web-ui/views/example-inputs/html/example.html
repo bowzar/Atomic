@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+    <div class="pager-container">
+        <h1 class="pager-header">Inputs</h1>
+
+        <h3>Types</h3>
+        <form class="code-example form-horizontal">
+            <div class="well blank">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Input text</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" placeholder="Please input text">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Input password</label>
+                    <div class="col-sm-9">
+                        <input type="password" class="form-control" placeholder="Please input password">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Input email</label>
+                    <div class="col-sm-9">
+                        <input type="email" class="form-control" placeholder="Please input email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Input number</label>
+                    <div class="col-sm-9">
+                        <input type="number" class="form-control" placeholder="Please input number" step="0.01">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Input datetime</label>
+                    <div class="col-sm-9">
+                        <div class="input-group date" data-date-format="yyyy-mm-dd">
+                            <input class="form-control" type="text" placeholder="Please pick date" readonly>
+                            <span class="input-group-addon">
+                                <button class="btn btn-default" type="button">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </button>
+                            </span>
+                            <span class="input-group-addon">
+                                <button class="btn btn-default" type="button">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Input datetime</label>
+                    <div class="col-sm-9">
+                        <div class="input-group date" data-date-format="yyyy-mm-dd" data-date="2017-11-02">
+                            <input class="form-control" type="text" value="2017-11-02" placeholder="Please pick date" readonly>
+                            <span class="input-group-addon">
+                                <button class="btn btn-default" type="button">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <h3>Checkboxes and radios</h3>
+        <form class="code-example">
+            <div class="checkbox">
+                <div class="tick-checkbox">
+                    <input type="checkbox" id="cb1">
+                    <label></label>
+                </div>
+                <label for="cb1">Option one is this and that be sure to include why it's great</label>
+            </div>
+            <div class="checkbox">
+                <div class="tick-checkbox">
+                    <input type="checkbox" id="cb2" disabled>
+                    <label></label>
+                </div>
+                <label for="cb2">Option two is disabled</label>
+            </div>
+            <div class="checkbox">
+                <div class="tick-checkbox">
+                    <input type="checkbox" id="cb3" checked>
+                    <label></label>
+                </div>
+                <label for="cb3">Option one is this and that be sure to include why it's great</label>
+            </div>
+            <div class="checkbox">
+                <div class="tick-checkbox">
+                    <input type="checkbox" id="cb4" checked disabled>
+                    <label></label>
+                </div>
+                <label for="cb4">Option two is disabled</label>
+            </div>
+
+
+            <div class="radio">
+                <div class="circle-radio">
+                    <input type="radio" id="rd1" name="rd" checked>
+                    <label></label>
+                </div>
+                <label for="rd1">Option one is this and that be sure to include why it's great</label>
+            </div>
+            <div class="radio">
+                <div class="circle-radio">
+                    <input type="radio" id="rd2" name="rd">
+                    <label></label>
+                </div>
+                <label for="rd2">Option two can be something else and selecting it will deselect option one</label>
+            </div>
+            <div class="radio">
+                <div class="circle-radio">
+                    <input type="radio" id="rd3" name="rd" disabled>
+                    <label></label>
+                </div>
+                <label for="rd3">Option three is disabled</label>
+            </div>
+            <div class="radio">
+                <div class="circle-radio">
+                    <input type="radio" id="rd4" disabled checked>
+                    <label></label>
+                </div>
+                <label for="rd4">Option three is disabled</label>
+            </div>
+        </form>
+        <h3>Silde checkboxes</h3>
+        <form class="code-example">
+            <div class="checkbox">
+                <div class="slide-checkbox">
+                    <input id="scb1" type="checkbox" checked>
+                    <label></label>
+                </div>
+                <label for="scb1">Option one is this and that be sure to include why it's great</label>
+            </div>
+            <div class="checkbox">
+                <div class="slide-checkbox">
+                    <input id="scb2" type="checkbox">
+                    <label></label>
+                </div>
+                <label for="scb2">Option two can be something else and selecting it will deselect option one</label>
+            </div>
+            <div class="checkbox">
+                <div class="slide-checkbox">
+                    <input id="scb2" type="checkbox" disabled>
+                    <label></label>
+                </div>
+                <label for="scb2">Option three is disabled</label>
+            </div>
+        </form>
+
+        <h3>Right alignment checkboxes and radios</h3>
+        <form class="code-example">
+            <div class="well blank">
+                <div class="checkbox">
+                    <label class="stretch" for="rcb1">Option one is this and that be sure to include why it's great</label>
+                    <div class="tick-checkbox">
+                        <input type="checkbox" id="rcb1">
+                        <label></label>
+                    </div>
+                </div>
+                <div class="checkbox">
+                    <label class="stretch" for="rcb2">Option two is disabled</label>
+                    <div class="tick-checkbox">
+                        <input type="checkbox" id="rcb2" disabled>
+                        <label></label>
+                    </div>
+                </div>
+                <div class="checkbox">
+                    <label class="stretch" for="rcb3">Option one is this and that be sure to include why it's great</label>
+                    <div class="tick-checkbox">
+                        <input type="checkbox" id="rcb3" checked>
+                        <label></label>
+                    </div>
+                </div>
+                <div class="checkbox">
+                    <label class="stretch" for="rcb4">Option two is disabled</label>
+                    <div class="tick-checkbox">
+                        <input type="checkbox" id="rcb4" checked disabled>
+                        <label></label>
+                    </div>
+                </div>
+
+
+                <div class="radio">
+                    <label class="stretch" for="rrd1">Option one is this and that be sure to include why it's great</label>
+                    <div class="circle-radio">
+                        <input type="radio" id="rrd1" name="rd" checked>
+                        <label></label>
+                    </div>
+                </div>
+                <div class="radio">
+                    <label class="stretch" for="rrd2">Option two can be something else and selecting it will deselect option one</label>
+                    <div class="circle-radio">
+                        <input type="radio" id="rrd2" name="rd">
+                        <label></label>
+                    </div>
+                </div>
+                <div class="radio">
+                    <label class="stretch" for="rrd3">Option three is disabled</label>
+                    <div class="circle-radio">
+                        <input type="radio" id="rrd3" name="rd" disabled>
+                        <label></label>
+                    </div>
+                </div>
+                <div class="radio">
+                    <label class="stretch" for="rrd4">Option three is disabled</label>
+                    <div class="circle-radio">
+                        <input type="radio" id="rrd4" disabled checked>
+                        <label></label>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <h3>Right alignment silde checkboxes</h3>
+        <form class="code-example">
+            <div class="well blank">
+                <div class="checkbox">
+                    <label class="stretch" for="rscb1">Option one is this and that be sure to include why it's great</label>
+                    <div class="slide-checkbox">
+                        <input id="rscb1" type="checkbox" checked>
+                        <label></label>
+                    </div>
+                </div>
+                <div class="checkbox">
+                    <label class="stretch" for="rscb2">Option two can be something else and selecting it will deselect option one</label>
+                    <div class="slide-checkbox">
+                        <input id="rscb2" type="checkbox">
+                        <label></label>
+                    </div>
+                </div>
+                <div class="checkbox">
+                    <label class="stretch" for="rscb2">Option three is disabled</label>
+                    <div class="slide-checkbox">
+                        <input id="rscb2" type="checkbox" disabled>
+                        <label></label>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <h3>Select</h3>
+        <form class="code-example">
+            <div class="well blank">
+                <div class="form-group">
+                    <label for="basic1">Basic</label>
+                    <select id="basic1" class="selectpicker show-tick form-control">
+                        <option>cow</option>
+                        <option data-subtext="option subtext">bull</option>
+                        <option class="get-class" disabled>ox</option>
+                        <optgroup label="test" data-subtext="optgroup subtext">
+                            <option>ASD</option>
+                            <option selected>Bla</option>
+                            <option>Ble</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="basic2">Basic disabled</label>
+                    <select id="basic2" class="selectpicker show-tick form-control" data-live-search-placeholder="Search" data-live-search="true"
+                        disabled>
+                        <option>cow</option>
+                        <option data-subtext="option subtext">bull</option>
+                        <option class="get-class" disabled>ox</option>
+                        <optgroup label="test" data-subtext="optgroup subtext">
+                            <option>ASD</option>
+                            <option selected>Bla</option>
+                            <option>Ble</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="basic3">Multiple, maxOptions=2</label>
+                    <select id="basic3" class="selectpicker form-control" data-live-search-placeholder="Search" data-live-search="true" multiple
+                        data-max-options="2">
+                        <option>cow</option>
+                        <option data-subtext="option subtext">bull</option>
+                        <option class="get-class" disabled>ox</option>
+                        <optgroup label="test" data-subtext="optgroup subtext">
+                            <option>ASD</option>
+                            <option selected>Bla</option>
+                            <option>Ble</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="basic4">Multiple, actionbox</label>
+                    <select id="basic4" class="selectpicker form-control" multiple data-live-search="true" data-live-search-placeholder="Search"
+                        data-actions-box="true">
+                        <optgroup label="filter1">
+                            <option>option1</option>
+                            <option>option2</option>
+                            <option>option3</option>
+                            <option>option4</option>
+                        </optgroup>
+                        <optgroup label="filter2">
+                            <option>option1</option>
+                            <option>option2</option>
+                            <option>option3</option>
+                            <option>option4</option>
+                        </optgroup>
+                    </select>
+                </div>
+            </div>
+        </form>
+
+        <h3>Input groups</h3>
+        <form class="code-example">
+            <div class="well blank">
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">Search</button>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Search key">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <button class="btn btn-primary" type="button">Search</button>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Search key">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search key">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">Search</button>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search key">
+                        <span class="input-group-btn">
+                            <button class="btn btn-primary" type="button">Search</button>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search key">
+                        <span class="input-group-btn dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Dropdown
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="javascript:void(0)">Action</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">Another action</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">Something else here</a>
+                                </li>
+                                <li role="separator" class="divider"></li>
+                                <li>
+                                    <a href="javascript:void(0)">Separated link</a>
+                                </li>
+                            </ul>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search key">
+                            <span class="input-group-btn dropdown">
+                                <button class="btn btn-default" type="button">
+                                    <span class="glyphicon glyphicon-search"></span>
+                                </button>
+                                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="javascript:void(0)">Action</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">Another action</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">Something else here</a>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+                                    <li>
+                                        <a href="javascript:void(0)">Separated link</a>
+                                    </li>
+                                </ul>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search key">
+                        <span class="input-group-btn dropdown">
+                            <button class="btn btn-default" type="button">Search</button>
+                            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="javascript:void(0)">Action</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">Another action</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">Something else here</a>
+                                </li>
+                                <li role="separator" class="divider"></li>
+                                <li>
+                                    <a href="javascript:void(0)">Separated link</a>
+                                </li>
+                            </ul>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <div class="checkbox">
+                                <div class="tick-checkbox">
+                                    <input id="igc1" type="checkbox" checked>
+                                    <label></label>
+                                </div>
+                                <label for="igc1">Check</label>
+                            </div>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Search key">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <div class="radio">
+                                <div class="circle-radio">
+                                    <input name="igrgroup" id="igr1" type="radio">
+                                    <label></label>
+                                </div>
+                                <label for="igr1">Radio</label>
+                            </div>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Search key">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <div class="radio">
+                                <div class="circle-radio">
+                                    <input name="igrgroup" id="igr2" type="radio" checked>
+                                    <label></label>
+                                </div>
+                                <label for="igr2">Radio</label>
+                            </div>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Search key">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon">￥</span>
+                        <input type="number" class="form-control" placeholder="Please input number">
+                        <span class="input-group-addon">.00</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Email address">
+                        <span class="input-group-addon">@yulintu.com</span>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

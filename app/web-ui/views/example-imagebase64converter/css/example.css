@@ -1,0 +1,8 @@
+#txtbase64{
+    height: 300px;
+    width: 100%;
+}
+
+#imagePreview img{
+    max-width: 100%;
+}

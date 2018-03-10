@@ -1,0 +1,9 @@
+.login-dialog .modal-content {
+  background-color: #f8f8f8;
+}
+.login-dialog .modal-body {
+  height: 100px;
+}
+.modal-header .form-control {
+  width: auto;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Atomic Web UI</title>
+    <link rel="stylesheet" href="views/global/css/font-awesome.min.css">
+    <link rel="stylesheet" href="views/global/css/bootstrap.min.css">
+    <link rel="stylesheet" href="views/global/css/bootstrap-dialog.min.css">
+    <link rel="stylesheet" href="views/global/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="views/global/css/bootstrap-datetimepicker.css">
+    <link rel="stylesheet" href="views/global/css/toastr.min.css">
+    <!-- <link rel="stylesheet" href="views/global/css/bootstrap-table.css"> -->
+    <link rel="stylesheet" href="views/framework/css/progress.css">
+    <link rel="stylesheet" href="views/framework/css/index.css">
+    <link rel="stylesheet" href="views/framework/css/theme01.css" tag="theme" />
+</head>
+
+<body>
+
+    <div id="body-framework">
+        <div id="body-framework-container" v-show="!isBusy"></div>
+        <loading v-if="isBusy"></loading>
+    </div>
+    <script data-main="views/framework/js/require.config" src="views/global/js/require.js"></script>
+
+</body>
+
+</html>

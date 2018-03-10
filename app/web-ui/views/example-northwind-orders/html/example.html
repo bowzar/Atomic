@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="views/example-northwind-orders/css/example.css">
+</head>
+
+<body>
+    <div id="northwind-orders" class="frame v-flex">
+        <div class="top-bar bar-container h-flex">
+
+            <button class="btn btn-default" v-on:click="viewDetails()" :disabled="!selectedItem">
+                <span class="fa fa-info-circle"></span>
+                <span>Properties</span>
+            </button>
+
+            <div class="flex-fill"></div>
+
+            <button class="btn btn-default" v-on:click="refreshAll()">
+                <span class="fa fa-refresh"></span>
+                <span>Refresh</span>
+            </button>
+
+            <form class="form-inline">
+                <input type="text" class="form-control" placeholder="Search" v-model="searchKey">
+            </form>
+
+        </div>
+        <div id="table" class="flex-fill">
+            <div class="table-head-frame">
+                <table class="table table-striped table-noborder table-hover table-head">
+                    <colgroup>
+                        <col width="5%" />
+                        <col width="15%" />
+                        <col width="8%" />
+                        <col width="10%" />
+                        <col width="11%" />
+                        <col width="11%" />
+                        <col width="10%" />
+                        <col width="30%" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th data-sortable="true" data-field="EmployeeName">Name</th>
+                            <th data-sortable="true" data-field="Freight">Freight</th>
+                            <th data-sortable="true" data-field="OrderDate" data-order="asc">Date</th>
+                            <th data-sortable="true" data-field="ShipCountry">Country</th>
+                            <th data-sortable="true" data-field="ShipCity">City</th>
+                            <th data-sortable="true" data-field="ShipPostalCode">Postal Code</th>
+                            <th data-sortable="true" data-field="ShipAddress">Address</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="table-body-frame">
+                <table class="table table-striped table-noborder table-hover table-body">
+                    <colgroup>
+                        <col width="5%" />
+                        <col width="15%" />
+                        <col width="8%" />
+                        <col width="10%" />
+                        <col width="11%" />
+                        <col width="11%" />
+                        <col width="10%" />
+                        <col width="30%" />
+                    </colgroup>
+                    <tbody>
+
+                        <tr v-for="c in items" v-bind:class="{active:selectedItem===c}" v-on:click="select(c)">
+                            <td>
+                                <div class="index-rect">{{c.Index}}</div>
+                            </td>
+                            <td>
+                                <img v-bind:src="'data:image/jpeg;base64,' + c.Photo" class="photo-small" />
+                                <span>{{c.EmployeeName}}</span>
+                            </td>
+                            <td>${{c.Freight}}</td>
+                            <td>{{atomic.ultis.formatJsonDate(c.OrderDate,'yyyy-mm-dd')}}</td>
+                            <td>
+                                <img v-bind:src="'data:image/jpeg;base64,' + c.CountryPhoto" class="photo-small" />
+                                <span></span>{{c.ShipCountry}}</span>
+                            </td>
+                            <td>{{c.ShipCity}}</td>
+                            <td>{{c.ShipPostalCode}}</td>
+                            <td>{{c.ShipAddress}}</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="paginator"></div>
+        <loading id="loading-orders" v-show="isBusy" class="loading-container-mask"></loading>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+#body-main-top {
+    position: relative;
+    z-index: 1000;
+    /* left: 0px;
+    right: 0px;
+    top: 0px;
+    height: auto; */
+}
+
+#body-main-top-icon{
+    font-size: 26px;
+    float: left;
+    top: 0px;
+}
+#body-main-top-title{
+    margin-left: 13px;
+    margin-right: 15px;
+    font-size: 26px;
+    float: left;
+}
+
+#body-main {
+    position: relative;
+    /* left: 0px;
+    top: 51px;
+    right: 0px;
+    bottom: 0px; */
+    height: calc(100% - 65px);
+    width: 100%;
+}
+
+#body-main-container {
+    position: relative;
+    /* left: 0px;
+    top: 51px;
+    right: 0px;
+    bottom: 0px; */
+    height: 100%;
+    width: 100%;
+}
+
+#body-bottom {
+    position: relative;
+    width: 100%;
+}
